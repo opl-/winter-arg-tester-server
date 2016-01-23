@@ -180,7 +180,7 @@ app.post('/add', jsonParser, function(req, res) {
 	});
 });
 
-app.get('/nextpassword', killEndpoint, function(req, res) {
+app.get('/nextpassword', /*killEndpoint, */function(req, res) {
 	var checkApplist = false, checkClient = false, checkClientVersion = false;
 	if ((checkApplist = !req.query.applist) || (checkClient = !req.query.client) || (checkClientVersion = (req.query.client != CLIENT_VERSION))) {
 		return res.status(400).json({
@@ -265,7 +265,7 @@ app.get('/nextpassword', killEndpoint, function(req, res) {
 	}
 });
 
-app.post('/solve', killEndpoint, jsonParser, function(req, res) {
+app.post('/solve', /*killEndpoint, */jsonParser, function(req, res) {
 	if (!req.body.id || !req.body.result) {
 		return res.status(400).json({
 			status: 'invalid_request'
