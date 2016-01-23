@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Bruteforce Manager</title>
+		<meta charset="utf8" />
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="/res/script.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="stylesheet" type="text/css" href="/res/style-{{ theme }}.css" />
+	</head>
+	<body>
+		<h2 id="title">Bruteforce Manager</h2>
+		<h4 id="subtitle">The developer of this site, the backend, and <a href="https://github.com/opl-/winter-arg-tester">this script</a> has been up for <span id="opl-h">39</span>h <span id="opl-m">58</span>m <span id="opl-s">24</span>s<br/>He finally went to bed. &gt;.&lt; When he woke up, it turned out the everything was broken.</h4>
+		<section id="add">
+			<div class="container">
+				<h5>Search the database</h5>
+				<input id="add_input" type="text" placeholder="Password" />
+				<input id="add_button" type="button" value="Search" />
+				<div id="recaptcha" class="g-recaptcha" data-sitekey="6LeJTRQTAAAAAIPJ-YRfy8LLRLeFFCk9Rvb_Rt4K"></div>
+			</div>
+			<div id="add_info">
+				<div>Search for something above.</div>
+			</div>
+		</section>
+		<section id="stats">
+			<h5>Stats</h5>
+			<b>Checked passwords:</b><br/>
+			<span id="passwords_solved" title="Checked"></span>/<span id="passwords_total" title="In total"></span> (<span id="passwords_perc"></span>%)
+		</section>
+		<section>
+			<div class="container">
+				<h5>Hits</h5>
+			</div>
+			<div id="hits">
+				<div>Loading...</div>
+			</div>
+		</section>
+	</body>
+</html>

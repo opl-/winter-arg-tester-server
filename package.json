@@ -1,0 +1,19 @@
+{
+  "name": "password-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "opl",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.1",
+    "express": "^4.13.3",
+    "mysql": "^2.10.0",
+    "nunjucks": "^2.2.0",
+    "recaptcha-v2": "^0.1.3"
+  }
+}

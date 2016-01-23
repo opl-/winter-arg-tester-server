@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Bruteforce Manager</title>
+		<meta charset="utf8" />
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="/res/script.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				border: 0;
+				box-sizing: border-box;
+				font-family: Arial, sans-serif;
+			}
+
+			html {
+				background-color: #fafafa;
+			}
+
+			h2, h4 {
+				margin-top: 20px;
+				text-align: center;
+			}
+
+			section {
+				width: 600px;
+				margin: 20px auto 20px;
+				border-radius: 2px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+				background-color: #fff;
+			}
+
+			input[type=text] {
+				padding: 2px;
+				border-bottom: 2px solid #999;
+			}
+
+			input[type=text]:focus {
+				border-bottom: 2px solid #bbb;
+				box-shadow: 0 -5px 2px -5px #aaa inset;
+			}
+
+			input[type=button], button {
+				display: block;
+				margin: 4px auto;
+				padding: 3px;
+				border-radius: 2px;
+				background-color: #4d77ee;
+				text-transform: uppercase;
+				box-shadow: 0 1px 2px #000;
+				font-weight: 600;
+				color: #fff;
+				cursor: pointer;
+			}
+
+			section>.container, #stats {
+				padding: 8px;
+			}
+
+			#add_input {
+				display: block;
+				margin: 4px auto;
+				width: 200px;
+			}
+
+			#add_info>div, #hits>div {
+				border-top: 1px solid rgba(0, 0, 0, 0.23);
+				padding: 8px;
+			}
+
+			#add_info>div .small, #hits>div .small {
+				font-size: 11px;
+				color: rgba(0, 0, 0, 0.7);
+			}
+
+			#recaptcha {
+				display: none;
+			}
+
+			#recaptcha.show {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-justify-content: center;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Bruteforce Manager</h2>
+		<h4>The developer of this site, the backend, and <a href="https://github.com/opl-/winter-arg-tester">this script</a> has been up for <span id="opl-h">39</span>h <span id="opl-m">58</span>m <span id="opl-s">24</span>s<br/>He finally went to bed. &gt;.&lt; When he woke up, it turned out the everything was broken.</h4>
+		<section id="add">
+			<div class="container">
+				<h5>Search the database</h5>
+				<input id="add_input" type="text" placeholder="Password" />
+				<div id="recaptcha" class="g-recaptcha" data-sitekey="6LeJTRQTAAAAAIPJ-YRfy8LLRLeFFCk9Rvb_Rt4K"></div>
+				<input id="add_button" type="button" value="Search" />
+			</div>
+			<div id="add_info">
+				<div>Search for something above.</div>
+			</div>
+		</section>
+		<section id="stats">
+			<h5>Stats</h5>
+			<b>Checked passwords:</b><br/>
+			<span id="passwords_solved" title="Checked"></span>/<span id="passwords_total" title="In total"></span> (<span id="passwords_perc"></span>%)
+		</section>
+		<section>
+			<div class="container">
+				<h5>Hits</h5>
+			</div>
+			<div id="hits">
+				<div>Loading...</div>
+			</div>
+		</section>
+	</body>
+</html>
